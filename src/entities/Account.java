@@ -5,7 +5,6 @@ public class Account {
 	private String holder;
 	private int accountNumber;
 	private double balance;
-	public double initialDeposit;
 	public Account() {
 		
 	}
@@ -18,7 +17,6 @@ public class Account {
 	public Account(String holder, int accountNumber, double initialDeposit) {
 		this.holder = holder;
 		this.accountNumber = accountNumber;
-		//Saldo começa com o depósito lido, se optar por realizar
 		deposit(initialDeposit);
 	}
 	public String getHolder() {
@@ -39,13 +37,13 @@ public class Account {
 	
 	public void deposit(double amount) {
 	    if (amount > 0) {
-	       this.balance = balance + amount;
+	       this.balance += amount;
 	    }
 	}
 	
 	public void withdraw(double amount) {
 		if (amount > 0) {
-			this.balance = (balance - amount) * 0.95;
+			this.balance -= (amount - 5);
 		}
 	}
 	
