@@ -39,12 +39,22 @@ public class Account {
 	
 	public void deposit(double amount) {
 	    if (amount > 0) {
-	        this.balance += amount;
+	       this.balance = balance + amount;
 	    }
 	}
 	
+	public void withdraw(double amount) {
+		if (amount > 0) {
+			this.balance = (balance - amount) * 0.95;
+		}
+	}
 	
-	
-	
-
+	public String toString() {
+	    return "Account " 
+	        + accountNumber 
+	        + ", Holder: " 
+	        + holder 
+	        + ", Balance: $ " 
+	        + String.format("%.2f", balance);
+	}
 }

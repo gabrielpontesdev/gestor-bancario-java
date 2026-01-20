@@ -19,7 +19,7 @@ public class Program {
 		sc.nextLine(); // Limpeza de buffer (importante!)
 		
 		
-		System.out.print("Enter account number: ");
+		System.out.print("Enter account holder: ");
 		String holder = sc.nextLine();
 		
 		System.out.print("Is there an initial deposit (y/n)? ");
@@ -36,7 +36,16 @@ public class Program {
 			account = new Account(holder, accountNumber);
 		}
 
+		System.out.println("Updated account data:");
+		System.out.println(account);
 		
+		System.out.println();
+		System.out.print("Enter a withdraw value: ");
+		double withdrawValue = sc.nextDouble();
+		account.withdraw(withdrawValue);
+		
+		System.out.println("Updated account data:");
+		System.out.println(account);
 		
 		sc.close();
 	}
