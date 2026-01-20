@@ -28,11 +28,11 @@ public class Program {
 		if (response == 'y') {
 		    System.out.print("Enter initial deposit value: ");
 		    double initialDeposit = sc.nextDouble();
-		    // Aqui você usa o seu Construtor com Sobrecarga (3 parâmetros)
+		    // usando o construtor com sobrecarga
 		    account = new Account(holder, accountNumber, initialDeposit);
 			}	
 		else {
-		    // Aqui você usa o Construtor sem o depósito
+		    // Usando o construtor sem o depósito
 			account = new Account(holder, accountNumber);
 		}
 
